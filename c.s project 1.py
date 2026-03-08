@@ -322,14 +322,14 @@ def main():
 
     root = tk.Tk()
     root.title("All-in-One Wizard")
-    root.iconbitmap(r"D:\gokul files\New folder\icon.ico")
+    root.iconbitmap(r"icon.ico")#give the path for ico
     # Example:
     root.config(bg='#DCDCDC')  # Light Amber
 
 
     # Example:
 # Use an image for the speech recognition button
-    img_speech = Image.open(r"D:\gokul files\New folder\voice-recognition.png")
+    img_speech = Image.open(r"voice-recognition.png")#path for voice-recognition.png
     img_speech = img_speech.resize((100, 100))
     img_speech = ImageTk.PhotoImage(img_speech)
 
@@ -353,22 +353,21 @@ def main():
                            "recognition. The output window displays voice recognition\n"
                            "results and actions taken  ")
 
-    # Example:
-    lbl = tk.Label(root, font=('calibri', 40, 'bold'), background='#FFFFFF', foreground='#4E342E')  # Brown
-
+    
+    lbl = tk.Label(root, font=('calibri', 40, 'bold'), background='#FFFFFF', foreground='#4E342E') 
     lbl.grid(row=0, column=1, padx=10, pady=10, sticky="e")
 
     create_button(root, "Close", 6, 2, close)
     time()
 
-    # Example:
-    label_temperature = tk.Label(root, text="Temperature: Loading...", bg='#FFFFFF')  # Light Blue
-    label_description = tk.Label(root, text="Description: Loading...", bg='#FFFFFF')  # Light Blue
-    label_temperature.grid(row=8, column=2, pady=10)  # Update this line
-    label_description.grid(row=9, column=2, pady=10)  # Update this line
+    
+    label_temperature = tk.Label(root, text="Temperature: Loading...", bg='#FFFFFF') 
+    label_description = tk.Label(root, text="Description: Loading...", bg='#FFFFFF')  
+    label_temperature.grid(row=8, column=2, pady=10)  
+    label_description.grid(row=9, column=2, pady=10)  
 
     
-    # Example:
+ 
     todo_frame = tk.Frame(root, bg='#CDCDC1')
     todo_frame.grid(row=0, column=3, rowspan=5, padx=10, pady=20, sticky="nsew")
 
@@ -393,3 +392,4 @@ def main():
 
 if __name__ == "__main__":
     main()
+
